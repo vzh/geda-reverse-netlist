@@ -100,14 +100,14 @@ V A 1
 V A 2
 
 # Speed adjusting, resistor 2,5k ?
-S3 SpAdj 1
-S2 SpAdj 2
-S1 SpAdj 3
+S3 RSpAdj 1
+S2 RSpAdj 2
+S1 RSpAdj 3
 
 # Tension adjusting, resistor 2,5k ?
-S3 TAdj 1
-D2 TAdj 2
-S1 TAdj 3
+S3 RTAdj 1
+D2 RTAdj 2
+S1 RTAdj 3
 
 # Switch Auto/Start Off/On
 5 Sw 1
