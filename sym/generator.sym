@@ -1,0 +1,86 @@
+v 20140308 2
+B 100 0 1000 1400 3 10 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 600 700 2 10 1 1 0 3 1
+refdes=U?
+T 600 500 2 10 0 1 0 3 1
+device=generator
+T 100 1500 2 8 0 0 0 0 1
+YourAttr=Your attribute value
+T 100 1700 2 8 0 0 0 0 1
+author=vzh
+T 100 1900 2 8 0 0 0 0 1
+comment=This is a comment attribute value
+T 100 2100 2 8 0 0 0 0 1
+description=generator connection
+P 0 1200 100 1200 1 0 0
+{
+T 150 1200 5 8 1 1 0 1 1
+pinnumber=COM
+T 0 1220 5 6 0 1 0 6 1
+pinseq=1
+T 0 1180 5 6 0 1 0 8 1
+pintype=IN
+T 150 1100 5 6 0 1 0 1 1
+pinlabel=COM
+}
+P 0 1000 100 1000 1 0 0
+{
+T 150 1000 5 8 1 1 0 1 1
+pinnumber=NO
+T 0 1020 5 6 0 1 0 6 1
+pinseq=2
+T 0 980 5 6 0 1 0 8 1
+pintype=IN
+T 150 900 5 6 0 1 0 1 1
+pinlabel=NO
+}
+P 0 800 100 800 1 0 0
+{
+T 150 800 5 8 1 1 0 1 1
+pinnumber=1
+T 0 820 5 6 0 1 0 6 1
+pinseq=3
+T 0 780 5 6 0 1 0 8 1
+pintype=IN
+T 150 700 5 6 0 1 0 1 1
+pinlabel=1
+}
+P 0 600 100 600 1 0 0
+{
+T 150 600 5 8 1 1 0 1 1
+pinnumber=16
+T 0 620 5 6 0 1 0 6 1
+pinseq=4
+T 0 580 5 6 0 1 0 8 1
+pintype=IN
+T 150 500 5 6 0 1 0 1 1
+pinlabel=16
+}
+P 0 400 100 400 1 0 0
+{
+T 150 400 5 8 1 1 0 1 1
+pinnumber=18
+T 0 420 5 6 0 1 0 6 1
+pinseq=5
+T 0 380 5 6 0 1 0 8 1
+pintype=IN
+T 150 300 5 6 0 1 0 1 1
+pinlabel=18
+}
+P 0 200 100 200 1 0 0
+{
+T 150 200 5 8 1 1 0 1 1
+pinnumber=19
+T 0 220 5 6 0 1 0 6 1
+pinseq=6
+T 0 180 5 6 0 1 0 8 1
+pintype=IN
+T 150 100 5 6 0 1 0 1 1
+pinlabel=19
+}
+B 100 1100 400 200 3 0 1 0 -1 -1 0 -1 -1 -1 -1 -1
+B 100 900 400 200 3 0 1 0 -1 -1 0 -1 -1 -1 -1 -1
+B 100 700 400 200 3 0 1 0 -1 -1 0 -1 -1 -1 -1 -1
+B 100 500 400 200 3 0 1 0 -1 -1 0 -1 -1 -1 -1 -1
+B 100 300 400 200 3 0 1 0 -1 -1 0 -1 -1 -1 -1 -1
+B 100 100 400 200 3 0 1 0 -1 -1 0 -1 -1 -1 -1 -1
