@@ -1,0 +1,129 @@
+v 20140308 2
+P 100 500 0 500 1 0 1
+{
+T 50 550 5 8 0 1 0 3 1
+pinnumber=12
+T 50 550 5 8 0 1 0 3 1
+pinseq=12
+T 50 550 9 8 0 1 0 3 1
+pinlabel=12
+T 50 450 5 8 0 1 0 5 1
+pintype=pas
+}
+P 500 500 600 500 1 0 1
+{
+T 550 550 5 8 0 1 0 3 1
+pinnumber=8
+T 550 550 5 8 0 1 0 3 1
+pinseq=8
+T 550 550 9 8 0 1 0 3 1
+pinlabel=8
+T 550 450 5 8 0 1 0 5 1
+pintype=pas
+}
+P 500 800 600 800 1 0 1
+{
+T 550 850 5 8 0 1 0 3 1
+pinnumber=4
+T 550 850 5 8 0 1 0 3 1
+pinseq=4
+T 550 850 9 8 0 1 0 3 1
+pinlabel=4
+T 550 750 5 8 0 1 0 5 1
+pintype=pas
+}
+L 460 660 180 500 3 0 0 0 -1 -1
+L 420 800 420 580 3 0 0 0 -1 -1
+L 100 500 180 500 3 0 0 0 -1 -1
+L 420 800 500 800 3 0 0 0 -1 -1
+L 420 500 500 500 3 0 0 0 -1 -1
+P 100 1000 0 1000 1 0 1
+{
+T 50 1050 5 8 0 1 0 3 1
+pinnumber=9
+T 50 1050 5 8 0 1 0 3 1
+pinseq=9
+T 50 1050 9 8 0 1 0 3 1
+pinlabel=9
+T 50 950 5 8 0 1 0 5 1
+pintype=pas
+}
+P 500 1000 600 1000 1 0 1
+{
+T 550 1050 5 8 0 1 0 3 1
+pinnumber=5
+T 550 1050 5 8 0 1 0 3 1
+pinseq=5
+T 550 1050 9 8 0 1 0 3 1
+pinlabel=5
+T 550 950 5 8 0 1 0 5 1
+pintype=pas
+}
+P 500 1300 600 1300 1 0 1
+{
+T 550 1350 5 8 0 1 0 3 1
+pinnumber=1
+T 550 1350 5 8 0 1 0 3 1
+pinseq=1
+T 550 1350 9 8 0 1 0 3 1
+pinlabel=1
+T 550 1250 5 8 0 1 0 5 1
+pintype=pas
+}
+L 460 1160 180 1000 3 0 0 0 -1 -1
+L 420 1300 420 1080 3 0 0 0 -1 -1
+L 100 1000 180 1000 3 0 0 0 -1 -1
+L 420 1300 500 1300 3 0 0 0 -1 -1
+L 420 1000 500 1000 3 0 0 0 -1 -1
+L 300 1070 300 450 3 0 0 2 60 60
+T 0 1600 5 2 0 0 0 0 1
+device=CONTACT_DPDT
+T 0 1650 5 2 0 0 0 0 1
+description=DPDT auxiliary contact group
+T 0 1700 5 2 0 0 0 0 1
+author=Vladimir Zhbanov /vzhbanov at gmail dot com/
+T 0 1750 5 2 0 0 0 0 1
+numslots=0
+T 0 1800 5 2 0 0 0 0 1
+footprint=unknown
+T 0 1850 5 2 0 0 0 0 1
+dist-license=GPL 2
+T 0 1900 5 2 0 0 0 0 1
+use-license=unlimited
+T 0 1950 5 2 0 0 0 0 1
+comment=GOST 2.755-87
+P 100 200 0 200 1 0 1
+{
+T 5 245 5 8 0 1 0 6 1
+pinnumber=13
+T 50 250 5 8 0 1 0 3 1
+pinseq=13
+T 155 195 9 8 0 1 0 0 1
+pinlabel=13
+T 50 150 5 8 0 1 0 5 1
+pintype=pwr
+T 0 250 5 10 0 0 0 6 1
+pintype=unknown
+T 0 250 5 10 0 0 0 6 1
+pinseq=0
+}
+P 500 200 600 200 1 0 1
+{
+T 595 245 5 8 0 1 0 0 1
+pinnumber=14
+T 550 250 5 8 0 1 0 3 1
+pinseq=14
+T 445 195 9 8 0 1 0 6 1
+pinlabel=14
+T 550 150 5 8 0 1 0 5 1
+pintype=pwr
+T 600 250 5 10 0 0 0 0 1
+pintype=unknown
+T 600 250 5 10 0 0 0 0 1
+pinseq=0
+}
+B 180 -40 240 480 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+L 100 200 180 200 3 0 0 0 -1 -1
+L 420 200 500 200 3 0 0 0 -1 -1
+T 300 1400 8 10 1 1 0 3 1
+refdes=K?
