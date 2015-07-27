@@ -6,7 +6,7 @@ schematic: create-schematic.scm script.scm define.scm
 	gschem -s $<
 
 script.scm: parser.scm netlist assignments
-	guile $< > $@
+	gschem -s $<
 
 generated.sch: save.scm create-schematic.scm script.scm define.scm
 	gschem -s $<

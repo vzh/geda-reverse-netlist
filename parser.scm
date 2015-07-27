@@ -4,6 +4,9 @@
 (use-modules (ice-9 regex))
 ;(use-modules (geda page))
 
+(add-to-load-path ".")
+(load-from-path "define.scm")
+
 (define (get-assignments-list inputf)
   (let* ((port (make-line-buffering-input-port (open-file inputf "r"))))
     (do ((line "" (read-string port))
@@ -249,20 +252,16 @@
     ))
 
 (define (instance->string ls assignments-list x y)
-  (format #t "(append-component-with-attribs \"~A\" '(~A . ~A)  \"~A\")\n"
+  (append-component-with-attribs
           (get-instance-symbol-name (car ls) assignments-list)
-          x
-          y
+          (cons x y)
           (car ls)))
 
 (define (netlist->schematic ls)
   (begin
 
     ; start
-    (format #t "
-(load \"define.scm\")
-(define (add-components) (begin
-")
+
     (let* ((assignments-list (get-assignments-list "assignments"))
           (N (length ls))
           (pi 3.1415926)
@@ -288,12 +287,8 @@
       )
 
 
-    (display "))\n")
-
     ; add nets
-    (display "(define (add-nets) (begin\n")
     (netbased-netlist->schematic-nets netbased-netlist)
-    (display "))\n")
 
     ; finish
     ))
@@ -323,12 +318,7 @@
   (if (not (null? (cdr ls)))
     (begin
       ; (append-net pair1 pair2)
-      (format #t "(append-net '(\"~A\" . \"~A\") '(\"~A\" . \"~A\"))\n"
-              (caar ls)
-              (cadar ls)
-              (caadr ls)
-              (cadadr ls)
-              )
+      (append-net (cons (caar ls) (cadar ls)) (cons (caadr ls) (cadadr ls)))
       (net->string (cdr ls))
       )
     ))

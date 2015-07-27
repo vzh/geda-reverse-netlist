@@ -26,7 +26,8 @@
     (if (or
           (> (length found) 1)
           (null? found))
-      (error "get-objects-by-pinnumber: Too many or too few objects with given \"pinnumber\":" found)
+      (output-error 'pin-number-error "get-objects-with-refdes-by-pinnumber"
+                    (format #f "Too many or too few objects with given \"pinnumber\": ~A" found) found)
       (car found))))
 
 ; fixme: объединить has-refdes? и has-pinnumber-in-question?
