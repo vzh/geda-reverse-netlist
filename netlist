@@ -76,13 +76,13 @@ xB I 13
 xB I 14
 xA I 15
 # Power input
-R1 I R1
-S1 I S1
-T1 I T1
+R1 I U1
+S1 I V1
+T1 I W1
 # Power output
-U  I U
-V  I V
-W  I W
+U  I U2
+V  I V2
+W  I W2
 
 # cabinet door
 
