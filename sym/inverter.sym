@@ -1,0 +1,388 @@
+v 20140308 2
+B 200 200 3000 4200 3 10 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 1700 2300 2 10 1 1 0 3 1
+refdes=U?
+T 1700 2100 2 10 1 1 0 3 1
+device=ABB ACS 355-03E-02A4-4
+T 200 4600 2 8 0 0 0 0 1
+YourAttr=Your attribute value
+T 200 4800 2 8 0 0 0 0 1
+author=vzh
+T 200 5000 2 8 0 0 0 0 1
+comment=This is a comment attribute value
+T 200 5200 2 8 0 0 0 0 1
+description=generator connection
+P 100 4200 200 4200 1 0 0
+{
+T 100 4220 5 8 1 1 0 6 1
+pinnumber=1
+T 100 4220 5 6 0 1 0 6 1
+pinseq=1
+T 100 4180 5 6 0 1 0 8 1
+pintype=PAS
+T 250 4100 5 6 1 1 0 1 1
+pinlabel=SCR
+}
+P 100 4000 200 4000 1 0 0
+{
+T 100 4020 5 8 1 1 0 6 1
+pinnumber=2
+T 100 4020 5 6 0 1 0 6 1
+pinseq=2
+T 100 3980 5 6 0 1 0 8 1
+pintype=IN
+T 250 3900 5 6 1 1 0 1 1
+pinlabel=AI1
+}
+P 100 3800 200 3800 1 0 0
+{
+T 100 3820 5 8 1 1 0 6 1
+pinnumber=3
+T 100 3820 5 6 0 1 0 6 1
+pinseq=3
+T 100 3780 5 6 0 1 0 8 1
+pintype=PWR
+T 250 3700 5 6 1 1 0 1 1
+pinlabel=GND
+}
+P 100 3600 200 3600 1 0 0
+{
+T 100 3620 5 8 1 1 0 6 1
+pinnumber=4
+T 100 3620 5 6 0 1 0 6 1
+pinseq=4
+T 100 3580 5 6 0 1 0 8 1
+pintype=PWR
+T 250 3500 5 6 1 1 0 1 1
+pinlabel=+10V
+}
+P 100 3400 200 3400 1 0 0
+{
+T 100 3420 5 8 1 1 0 6 1
+pinnumber=5
+T 100 3420 5 6 0 1 0 6 1
+pinseq=5
+T 100 3380 5 6 0 1 0 8 1
+pintype=IN
+T 250 3300 5 6 1 1 0 1 1
+pinlabel=AI2
+}
+P 100 3200 200 3200 1 0 0
+{
+T 100 3220 5 8 1 1 0 6 1
+pinnumber=6
+T 100 3220 5 6 0 1 0 6 1
+pinseq=6
+T 100 3180 5 6 0 1 0 8 1
+pintype=PWR
+T 250 3100 5 6 1 1 0 1 1
+pinlabel=GND
+}
+P 100 3000 200 3000 1 0 0
+{
+T 100 3020 5 8 1 1 0 6 1
+pinnumber=7
+T 100 3020 5 6 0 1 0 6 1
+pinseq=7
+T 100 2980 5 6 0 1 0 8 1
+pintype=OUT
+T 250 2900 5 6 1 1 0 1 1
+pinlabel=AO
+}
+P 100 2800 200 2800 1 0 0
+{
+T 100 2820 5 8 1 1 0 6 1
+pinnumber=8
+T 100 2820 5 6 0 1 0 6 1
+pinseq=8
+T 100 2780 5 6 0 1 0 8 1
+pintype=PWR
+T 250 2700 5 6 1 1 0 1 1
+pinlabel=GND
+}
+P 100 2600 200 2600 1 0 0
+{
+T 100 2620 5 8 1 1 0 6 1
+pinnumber=9
+T 100 2620 5 6 0 1 0 6 1
+pinseq=9
+T 100 2580 5 6 0 1 0 8 1
+pintype=IN
+T 250 2500 5 6 1 1 0 1 1
+pinlabel=+24V
+}
+P 100 2400 200 2400 1 0 0
+{
+T 100 2420 5 8 1 1 0 6 1
+pinnumber=10
+T 100 2420 5 6 0 1 0 6 1
+pinseq=10
+T 100 2380 5 6 0 1 0 8 1
+pintype=PWR
+T 250 2300 5 6 1 1 0 1 1
+pinlabel=GND
+}
+P 100 2200 200 2200 1 0 0
+{
+T 100 2220 5 8 1 1 0 6 1
+pinnumber=11
+T 100 2220 5 6 0 1 0 6 1
+pinseq=11
+T 100 2180 5 6 0 1 0 8 1
+pintype=PWR
+T 250 2100 5 6 1 1 0 1 1
+pinlabel=DCOM
+}
+P 100 2000 200 2000 1 0 0
+{
+T 100 2020 5 8 1 1 0 6 1
+pinnumber=12
+T 100 2020 5 6 0 1 0 6 1
+pinseq=12
+T 100 1980 5 6 0 1 0 8 1
+pintype=IN
+T 250 1900 5 6 1 1 0 1 1
+pinlabel=DI1
+}
+P 100 1800 200 1800 1 0 0
+{
+T 100 1820 5 8 1 1 0 6 1
+pinnumber=13
+T 100 1820 5 6 0 1 0 6 1
+pinseq=13
+T 100 1780 5 6 0 1 0 8 1
+pintype=IN
+T 250 1700 5 6 1 1 0 1 1
+pinlabel=DI2
+}
+P 100 1600 200 1600 1 0 0
+{
+T 100 1620 5 8 1 1 0 6 1
+pinnumber=14
+T 100 1620 5 6 0 1 0 6 1
+pinseq=14
+T 100 1580 5 6 0 1 0 8 1
+pintype=IN
+T 250 1500 5 6 1 1 0 1 1
+pinlabel=DI3
+}
+P 100 1400 200 1400 1 0 0
+{
+T 100 1420 5 8 1 1 0 6 1
+pinnumber=15
+T 100 1420 5 6 0 1 0 6 1
+pinseq=15
+T 100 1380 5 6 0 1 0 8 1
+pintype=IN
+T 250 1300 5 6 1 1 0 1 1
+pinlabel=DI4
+}
+P 100 1200 200 1200 1 0 0
+{
+T 100 1220 5 8 1 1 0 6 1
+pinnumber=16
+T 100 1220 5 6 0 1 0 6 1
+pinseq=16
+T 100 1180 5 6 0 1 0 8 1
+pintype=IN
+T 250 1100 5 6 1 1 0 1 1
+pinlabel=DI5
+}
+P 100 1000 200 1000 1 0 0
+{
+T 100 1020 5 8 1 1 0 6 1
+pinnumber=01
+T 100 1020 5 6 0 1 0 6 1
+pinseq=23
+T 100 980 5 6 0 1 0 8 1
+pintype=OUT
+T 250 900 5 6 1 1 0 1 1
+pinlabel=OUT1
+}
+P 100 800 200 800 1 0 0
+{
+T 100 820 5 8 1 1 0 6 1
+pinnumber=02
+T 100 820 5 6 0 1 0 6 1
+pinseq=24
+T 100 780 5 6 0 1 0 8 1
+pintype=OUT
+T 250 700 5 6 1 1 0 1 1
+pinlabel=OUT2
+}
+P 100 600 200 600 1 0 0
+{
+T 100 620 5 8 1 1 0 6 1
+pinnumber=03
+T 100 620 5 6 0 1 0 6 1
+pinseq=25
+T 100 580 5 6 0 1 0 8 1
+pintype=IN
+T 250 500 5 6 1 1 0 1 1
+pinlabel=IN1
+}
+P 100 400 200 400 1 0 0
+{
+T 100 420 5 8 1 1 0 6 1
+pinnumber=04
+T 100 420 5 6 0 1 0 6 1
+pinseq=26
+T 100 380 5 6 0 1 0 8 1
+pintype=IN
+T 250 300 5 6 1 1 0 1 1
+pinlabel=IN2
+}
+P 3300 4200 3200 4200 1 0 0
+{
+T 3300 4220 5 8 1 1 0 0 1
+pinnumber=17
+T 3300 4220 5 6 0 1 0 0 1
+pinseq=17
+T 3300 4180 5 6 0 1 0 2 1
+pintype=PWR
+T 3150 4100 5 6 1 1 0 7 1
+pinlabel=ROCOM
+}
+P 3300 4000 3200 4000 1 0 0
+{
+T 3300 4020 5 8 1 1 0 0 1
+pinnumber=18
+T 3300 4020 5 6 0 1 0 0 1
+pinseq=18
+T 3300 3980 5 6 0 1 0 2 1
+pintype=OUT
+T 3150 3900 5 6 1 1 0 7 1
+pinlabel=RONC
+}
+P 3300 3800 3200 3800 1 0 0
+{
+T 3300 3820 5 8 1 1 0 0 1
+pinnumber=19
+T 3300 3820 5 6 0 1 0 0 1
+pinseq=19
+T 3300 3780 5 6 0 1 0 2 1
+pintype=OUT
+T 3150 3700 5 6 1 1 0 7 1
+pinlabel=RONO
+}
+P 3300 3600 3200 3600 1 0 0
+{
+T 3300 3620 5 8 1 1 0 0 1
+pinnumber=20
+T 3300 3620 5 6 0 1 0 0 1
+pinseq=20
+T 3300 3580 5 6 0 1 0 2 1
+pintype=PWR
+T 3150 3500 5 6 1 1 0 7 1
+pinlabel=DOSRC
+}
+P 3300 3400 3200 3400 1 0 0
+{
+T 3300 3420 5 8 1 1 0 0 1
+pinnumber=21
+T 3300 3420 5 6 0 1 0 0 1
+pinseq=21
+T 3300 3380 5 6 0 1 0 2 1
+pintype=OUT
+T 3150 3300 5 6 1 1 0 7 1
+pinlabel=DOOUT
+}
+P 3300 3200 3200 3200 1 0 0
+{
+T 3300 3220 5 8 1 1 0 0 1
+pinnumber=22
+T 3300 3220 5 6 0 1 0 0 1
+pinseq=22
+T 3300 3180 5 6 0 1 0 2 1
+pintype=PWR
+T 3150 3100 5 6 1 1 0 7 1
+pinlabel=DOGND
+}
+P 400 4500 400 4400 1 0 0
+{
+T 380 4500 5 8 1 1 0 6 1
+pinnumber=PE
+T 380 4500 5 6 0 1 0 6 1
+pinseq=27
+T 420 4500 5 6 0 1 0 0 1
+pintype=PAS
+T 500 4350 5 6 1 1 0 2 1
+pinlabel=PE
+}
+P 600 4500 600 4400 1 0 0
+{
+T 580 4500 5 8 1 1 0 6 1
+pinnumber=U1
+T 580 4500 5 6 0 1 0 6 1
+pinseq=28
+T 620 4500 5 6 0 1 0 0 1
+pintype=PWR
+T 700 4350 5 6 1 1 0 2 1
+pinlabel=U1
+}
+P 800 4500 800 4400 1 0 0
+{
+T 780 4500 5 8 1 1 0 6 1
+pinnumber=V1
+T 780 4500 5 6 0 1 0 6 1
+pinseq=29
+T 820 4500 5 6 0 1 0 0 1
+pintype=PWR
+T 900 4350 5 6 1 1 0 2 1
+pinlabel=V1
+}
+P 1000 4500 1000 4400 1 0 0
+{
+T 980 4500 5 8 1 1 0 6 1
+pinnumber=W1
+T 980 4500 5 6 0 1 0 6 1
+pinseq=30
+T 1020 4500 5 6 0 1 0 0 1
+pintype=PWR
+T 1100 4350 5 6 1 1 0 2 1
+pinlabel=W1
+}
+P 400 100 400 200 1 0 0
+{
+T 380 100 5 8 1 1 0 8 1
+pinnumber=PWRGND
+T 380 100 5 6 0 1 0 8 1
+pinseq=31
+T 420 100 5 6 0 1 0 2 1
+pintype=PAS
+T 500 250 5 6 1 1 0 0 1
+pinlabel=PWRGND
+}
+P 600 100 600 200 1 0 0
+{
+T 580 100 5 8 1 1 0 8 1
+pinnumber=U2
+T 580 100 5 6 0 1 0 8 1
+pinseq=32
+T 620 100 5 6 0 1 0 2 1
+pintype=PWR
+T 700 250 5 6 1 1 0 0 1
+pinlabel=U2
+}
+P 800 100 800 200 1 0 0
+{
+T 780 100 5 8 1 1 0 8 1
+pinnumber=V2
+T 780 100 5 6 0 1 0 8 1
+pinseq=33
+T 820 100 5 6 0 1 0 2 1
+pintype=PWR
+T 900 250 5 6 1 1 0 0 1
+pinlabel=V2
+}
+P 1000 100 1000 200 1 0 0
+{
+T 980 100 5 8 1 1 0 8 1
+pinnumber=W2
+T 980 100 5 6 0 1 0 8 1
+pinseq=34
+T 1020 100 5 6 0 1 0 2 1
+pintype=PWR
+T 1100 250 5 6 1 1 0 0 1
+pinlabel=W2
+}
