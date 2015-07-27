@@ -1,6 +1,6 @@
 X main-terminal.sym
 Smain circuit-breaker-3ph-v.sym
-M motor-ac.sym
+M ac-motor+gnd.sym
 G generator.sym
 B brake.sym
 Cab cabinet.sym
