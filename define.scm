@@ -1,6 +1,10 @@
 (use-modules (geda page))
 (use-modules (geda object))
 
+(define (output-error error-type func-name message culprit)
+  (format (current-error-port) "ERROR in ~A: ~A\n" func-name message)
+  (scm-error error-type func-name message (list culprit) '()))
+
 (define (remove-nets)
   (let ((page (active-page))
         (nets (filter net? (page-contents (active-page)))))
@@ -46,15 +50,18 @@
 (define (get-pin-with-number pin-list pinnumber)
   (let ((pins-with-number (filter (lambda (pin) (has-pinnumber-in-question? pin pinnumber)) pin-list)))
     (if (> (length pins-with-number) 1)
-      (scm-error 'pin-number-error "get-pin-with-number" "Pins ~A have the same \"pinnumber\"" pins-with-number '())
+      (output-error 'pin-number-error "get-pin-with-number"
+                    (format #f "Pins ~A have the same \"pinnumber\"" pins-with-number) pins-with-number)
       (if (null? pins-with-number)
-        (scm-error 'pin-number-error "get-pin-with-number" "No pins with \"pinnumber=~A\"" (list pinnumber) '())
+        (output-error 'pin-number-error "get-pin-with-number"
+                      (format #f "No pins with \"pinnumber=~A\"" pinnumber) pinnumber)
         (car pins-with-number)))))
 
 (define (component-pin-list object)
   (if (component? object)
     (filter pin? (component-contents object))
-    (scm-error 'misc-error "component-pin-list" "Object ~A is not component" (list object) '())
+    (output-error 'misc-error "component-pin-list"
+                  (format #f "Object ~A is not component" object) object)
     ))
 
 ; get pin coord for pinnumber
@@ -87,10 +94,9 @@
     (if C
       (begin (page-append! (active-page) C A)
              (attach-attribs! C A))
-      (begin
-        (format (current-error-port) "ERROR in append-component-with-attribs: Component ~A not found\n" symbol-name)
-        (scm-error 'misc-error "append-component-with-attribs" "Component ~A not found" (list symbol-name) '())
-        ))))
+      (output-error 'misc-error "append-component-with-attribs"
+                    (format #f "Component ~A not found" symbol-name) symbol-name)
+      )))
 
 (define (append-net pair1 pair2)
   (page-append!
