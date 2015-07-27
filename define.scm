@@ -55,7 +55,7 @@
                     (format #f "Pins ~A for refdes=~A have the same \"pinnumber\"" pins-with-number refdes) pins-with-number)
       (if (null? pins-with-number)
         (output-error 'pin-number-error "get-pin-with-number"
-                      (format #f "No pins with \"pinnumber=~A\" for refdes ~A" pinnumber refdes) pinnumber)
+                      (format #f "No pins with \"pinnumber=~A\" for refdes \"~A\"" pinnumber refdes) pinnumber)
         (car pins-with-number)))))
 
 (define (component-pin-list object)
