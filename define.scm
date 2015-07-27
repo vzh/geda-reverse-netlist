@@ -53,7 +53,7 @@
   (let ((pins-with-number (filter (lambda (pin) (has-pinnumber-in-question? pin pinnumber)) pin-list)))
     (if (> (length pins-with-number) 1)
       (output-error 'pin-number-error "get-pin-with-number"
-                    (format #f "Pins ~A for refdes=~A have the same \"pinnumber\"" pins-with-number refdes) pins-with-number)
+                    (format #f "Two or more pins with \"pinnumber=~A\" for \"refdes=~A\"" pinnumber refdes) pins-with-number)
       (if (null? pins-with-number)
         (output-error 'pin-number-error "get-pin-with-number"
                       (format #f "No pins with \"pinnumber=~A\" for refdes \"~A\"" pinnumber refdes) pinnumber)
