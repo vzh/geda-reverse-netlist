@@ -17,11 +17,12 @@
     (page-contents (active-page))))
 
 ; filter objects by given pinnumber
-(define (get-objects-by-pinnumber objects pinnumber)
-  (let ((found (filter
-                 (lambda (object)
-                   (get-pin-with-number (component-pin-list object) pinnumber))
-                 objects)))
+(define (get-objects-with-refdes-by-pinnumber refdes pinnumber)
+  (let* ((objects (get-objects-by-refdes refdes))
+         (found (filter
+                  (lambda (object)
+                    (get-pin-with-number (component-pin-list object) pinnumber))
+                  objects)))
     (if (or
           (> (length found) 1)
           (null? found))
@@ -79,12 +80,10 @@
         (pinnumber2 (cdr pair2)))
     (make-net
       (get-object-pin-coord
-        (get-objects-by-pinnumber
-          (get-objects-by-refdes refdes1) pinnumber1)
+        (get-objects-with-refdes-by-pinnumber refdes1 pinnumber1)
         pinnumber1)
       (get-object-pin-coord
-        (get-objects-by-pinnumber
-          (get-objects-by-refdes refdes2) pinnumber2)
+        (get-objects-with-refdes-by-pinnumber refdes2 pinnumber2)
         pinnumber2)
       )))
 
