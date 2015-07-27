@@ -1,14 +1,8 @@
-.PHONY: all gschem clean check
+.PHONY: all clean check
 
-all: schematic
+all: generated.sch
 
-schematic: create-schematic.scm script.scm define.scm
-	gschem -s $<
-
-script.scm: parser.scm netlist assignments
-	gschem -s $<
-
-generated.sch: save.scm create-schematic.scm script.scm define.scm
+generated.sch: parser.scm define.scm
 	gschem -s $<
 
 check: standard.sch generated.sch
@@ -19,5 +13,5 @@ check: standard.sch generated.sch
 	@echo *SUCCESS*
 
 clean:
-	rm -f script.scm generated.sch
+	rm -f generated.sch
 	rm -f *.sch~ sym/*.sym~
