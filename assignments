@@ -1,5 +1,5 @@
 X main-terminal.sym
-Smain circuit-breaker-3ph-v.sym
+SMain circuitbreaker-3ph-v.sym
 RPM rpm-meter.sym
 EMS emergency-pushbutton.sym
 M ac-motor+gnd.sym
