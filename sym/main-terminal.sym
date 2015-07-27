@@ -59,7 +59,7 @@ pinlabel=N
 P 500 3000 400 3000 1 0 0
 {
 T 350 3100 5 8 0 1 0 7 1
-pinnumber=PE
+pinnumber=PE1
 T 500 3020 5 6 0 1 0 0 1
 pinseq=5
 T 500 2980 5 6 0 1 0 2 1
@@ -103,7 +103,7 @@ pinlabel=W
 P 500 2200 400 2200 1 0 0
 {
 T 350 2300 5 8 0 1 0 7 1
-pinnumber=PE
+pinnumber=PE2
 T 500 2220 5 6 0 1 0 0 1
 pinseq=9
 T 500 2180 5 6 0 1 0 2 1
