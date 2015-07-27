@@ -26,12 +26,10 @@ NO  X NO
 R  SMain R
 S  SMain S
 T  SMain T
-N  SMain N
 # Lower side
 R1 SMain R1
 S1 SMain S1
 T1 SMain T1
-N  SMain N
 
 # Motor
 U  M U
