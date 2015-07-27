@@ -84,8 +84,13 @@
 (define (append-component-with-attribs symbol-name coords refdes)
   (let ((C (make-component/library symbol-name coords 0 #f #f))
         (A (make-text coords 'middle-center 0 (string-append "refdes=" refdes) 12 #t 'value)))
-    (page-append! (active-page) C A)
-    (attach-attribs! C A)))
+    (if C
+      (begin (page-append! (active-page) C A)
+             (attach-attribs! C A))
+      (begin
+        (format (current-error-port) "ERROR in append-component-with-attribs: Component ~A not found\n" symbol-name)
+        (scm-error 'misc-error "append-component-with-attribs" "Component ~A not found" (list symbol-name) '())
+        ))))
 
 (define (append-net pair1 pair2)
   (page-append!
