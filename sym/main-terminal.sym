@@ -1,0 +1,223 @@
+v 20140308 2
+B 0 0 400 4000 3 10 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 200 4100 2 10 1 1 0 3 1
+refdes=X?
+T 200 1900 2 10 0 1 0 3 1
+device=main terminal
+T 0 4100 2 8 0 0 0 0 1
+YourAttr=Your attribute value
+T 0 4300 2 8 0 0 0 0 1
+author=vzh
+T 0 4500 2 8 0 0 0 0 1
+comment=This is a comment attribute value
+T 0 4700 2 8 0 0 0 0 1
+description=main terminal
+P 500 3800 400 3800 1 0 0
+{
+T 350 3900 5 8 0 1 0 7 1
+pinnumber=R
+T 500 3820 5 6 0 1 0 0 1
+pinseq=1
+T 500 3780 5 6 0 1 0 2 1
+pintype=XXX
+T 350 3800 5 6 1 1 0 7 1
+pinlabel=R
+}
+P 500 3600 400 3600 1 0 0
+{
+T 350 3700 5 8 0 1 0 7 1
+pinnumber=S
+T 500 3620 5 6 0 1 0 0 1
+pinseq=2
+T 500 3580 5 6 0 1 0 2 1
+pintype=XXX
+T 350 3600 5 6 1 1 0 7 1
+pinlabel=S
+}
+P 500 3400 400 3400 1 0 0
+{
+T 350 3500 5 8 0 1 0 7 1
+pinnumber=T
+T 500 3420 5 6 0 1 0 0 1
+pinseq=3
+T 500 3380 5 6 0 1 0 2 1
+pintype=XXX
+T 350 3400 5 6 1 1 0 7 1
+pinlabel=T
+}
+P 500 3200 400 3200 1 0 0
+{
+T 350 3300 5 8 0 1 0 7 1
+pinnumber=N
+T 500 3220 5 6 0 1 0 0 1
+pinseq=4
+T 500 3180 5 6 0 1 0 2 1
+pintype=XXX
+T 350 3200 5 6 1 1 0 7 1
+pinlabel=N
+}
+P 500 3000 400 3000 1 0 0
+{
+T 350 3100 5 8 0 1 0 7 1
+pinnumber=PE
+T 500 3020 5 6 0 1 0 0 1
+pinseq=5
+T 500 2980 5 6 0 1 0 2 1
+pintype=XXX
+T 350 3000 5 6 1 1 0 7 1
+pinlabel=PE
+}
+P 500 2800 400 2800 1 0 0
+{
+T 350 2900 5 8 0 1 0 7 1
+pinnumber=U
+T 500 2820 5 6 0 1 0 0 1
+pinseq=6
+T 500 2780 5 6 0 1 0 2 1
+pintype=XXX
+T 350 2800 5 6 1 1 0 7 1
+pinlabel=U
+}
+P 500 2600 400 2600 1 0 0
+{
+T 350 2700 5 8 0 1 0 7 1
+pinnumber=V
+T 500 2620 5 6 0 1 0 0 1
+pinseq=7
+T 500 2580 5 6 0 1 0 2 1
+pintype=XXX
+T 350 2600 5 6 1 1 0 7 1
+pinlabel=V
+}
+P 500 2400 400 2400 1 0 0
+{
+T 350 2500 5 8 0 1 0 7 1
+pinnumber=W
+T 500 2420 5 6 0 1 0 0 1
+pinseq=8
+T 500 2380 5 6 0 1 0 2 1
+pintype=XXX
+T 350 2400 5 6 1 1 0 7 1
+pinlabel=W
+}
+P 500 2200 400 2200 1 0 0
+{
+T 350 2300 5 8 0 1 0 7 1
+pinnumber=PE
+T 500 2220 5 6 0 1 0 0 1
+pinseq=9
+T 500 2180 5 6 0 1 0 2 1
+pintype=XXX
+T 350 2200 5 6 1 1 0 7 1
+pinlabel=PE
+}
+P 500 2000 400 2000 1 0 0
+{
+T 350 2100 5 8 0 1 0 7 1
+pinnumber=COM
+T 500 2020 5 6 0 1 0 0 1
+pinseq=10
+T 500 1980 5 6 0 1 0 2 1
+pintype=XXX
+T 350 2000 5 6 1 1 0 7 1
+pinlabel=COM
+}
+P 500 1800 400 1800 1 0 0
+{
+T 350 1900 5 8 0 1 0 7 1
+pinnumber=NO
+T 500 1820 5 6 0 1 0 0 1
+pinseq=11
+T 500 1780 5 6 0 1 0 2 1
+pintype=XXX
+T 350 1800 5 6 1 1 0 7 1
+pinlabel=NO
+}
+P 500 1600 400 1600 1 0 0
+{
+T 350 1700 5 8 0 1 0 7 1
+pinnumber=21
+T 500 1620 5 6 0 1 0 0 1
+pinseq=12
+T 500 1580 5 6 0 1 0 2 1
+pintype=XXX
+T 350 1600 5 6 1 1 0 7 1
+pinlabel=21
+}
+P 500 1400 400 1400 1 0 0
+{
+T 350 1500 5 8 0 1 0 7 1
+pinnumber=2
+T 500 1420 5 6 0 1 0 0 1
+pinseq=13
+T 500 1380 5 6 0 1 0 2 1
+pintype=XXX
+T 350 1400 5 6 1 1 0 7 1
+pinlabel=2
+}
+P 500 1200 400 1200 1 0 0
+{
+T 350 1300 5 8 0 1 0 7 1
+pinnumber=6
+T 500 1220 5 6 0 1 0 0 1
+pinseq=14
+T 500 1180 5 6 0 1 0 2 1
+pintype=XXX
+T 350 1200 5 6 1 1 0 7 1
+pinlabel=6
+}
+P 500 1000 400 1000 1 0 0
+{
+T 350 1100 5 8 0 1 0 7 1
+pinnumber=7
+T 500 1020 5 6 0 1 0 0 1
+pinseq=15
+T 500 980 5 6 0 1 0 2 1
+pintype=XXX
+T 350 1000 5 6 1 1 0 7 1
+pinlabel=7
+}
+P 500 800 400 800 1 0 0
+{
+T 350 900 5 8 0 1 0 7 1
+pinnumber=1
+T 500 820 5 6 0 1 0 0 1
+pinseq=16
+T 500 780 5 6 0 1 0 2 1
+pintype=XXX
+T 350 800 5 6 1 1 0 7 1
+pinlabel=1
+}
+P 500 600 400 600 1 0 0
+{
+T 350 700 5 8 0 1 0 7 1
+pinnumber=16
+T 500 620 5 6 0 1 0 0 1
+pinseq=17
+T 500 580 5 6 0 1 0 2 1
+pintype=XXX
+T 350 600 5 6 1 1 0 7 1
+pinlabel=16
+}
+P 500 400 400 400 1 0 0
+{
+T 350 500 5 8 0 1 0 7 1
+pinnumber=18
+T 500 420 5 6 0 1 0 0 1
+pinseq=18
+T 500 380 5 6 0 1 0 2 1
+pintype=XXX
+T 350 400 5 6 1 1 0 7 1
+pinlabel=18
+}
+P 500 200 400 200 1 0 0
+{
+T 350 300 5 8 0 1 0 7 1
+pinnumber=19
+T 500 220 5 6 0 1 0 0 1
+pinseq=19
+T 500 180 5 6 0 1 0 2 1
+pintype=XXX
+T 350 200 5 6 1 1 0 7 1
+pinlabel=19
+}
