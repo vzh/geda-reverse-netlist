@@ -44,7 +44,7 @@ COM G COM
 NO  G NO
 
 # Brake
-21  B 21
+21  B 1
 2   B 2
 
 # Cabinet 3
@@ -94,8 +94,8 @@ W  I W
 # S1 R1 2
 # M+ R2 1
 # S1 R2 2
-M+ RPM M+
-S1 RPM S1
+M+ RPM 1
+S1 RPM 2
 
 # Ammeter
 V A 1
