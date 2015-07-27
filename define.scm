@@ -21,7 +21,7 @@
   (let* ((objects (get-objects-by-refdes refdes))
          (found (filter
                   (lambda (object)
-                    (get-pin-with-number (component-pin-list object) pinnumber))
+                    (get-pin-with-number refdes (component-pin-list object) pinnumber))
                   objects)))
     (if (or
           (> (length found) 1)
@@ -48,14 +48,14 @@
           (and (equal? (attrib-name attr) "pinnumber") (equal? (attrib-value attr) pinnumber)))
         (object-attribs object)))))
 
-(define (get-pin-with-number pin-list pinnumber)
+(define (get-pin-with-number refdes pin-list pinnumber)
   (let ((pins-with-number (filter (lambda (pin) (has-pinnumber-in-question? pin pinnumber)) pin-list)))
     (if (> (length pins-with-number) 1)
       (output-error 'pin-number-error "get-pin-with-number"
-                    (format #f "Pins ~A have the same \"pinnumber\"" pins-with-number) pins-with-number)
+                    (format #f "Pins ~A for refdes=~A have the same \"pinnumber\"" pins-with-number refdes) pins-with-number)
       (if (null? pins-with-number)
         (output-error 'pin-number-error "get-pin-with-number"
-                      (format #f "No pins with \"pinnumber=~A\"" pinnumber) pinnumber)
+                      (format #f "No pins with \"pinnumber=~A\" for refdes ~A" pinnumber refdes) pinnumber)
         (car pins-with-number)))))
 
 (define (component-pin-list object)
@@ -66,11 +66,12 @@
     ))
 
 ; get pin coord for pinnumber
-(define (get-object-pin-coord object pinnumber)
+(define (get-object-pin-coord refdes object pinnumber)
   ;line-start is the connectible point
   (line-start (get-pin-with-number
-              (component-pin-list object)
-              pinnumber)))
+                refdes
+                (component-pin-list object)
+                pinnumber)))
 
 ; make net between two fignations: (refdes1 . pinnumber1) and (refdes2 . pinnumber2)
 (define (make-net-between-refdes-pinnumber-pairs pair1 pair2)
@@ -80,9 +81,11 @@
         (pinnumber2 (cdr pair2)))
     (make-net
       (get-object-pin-coord
+        refdes1
         (get-objects-with-refdes-by-pinnumber refdes1 pinnumber1)
         pinnumber1)
       (get-object-pin-coord
+        refdes2
         (get-objects-with-refdes-by-pinnumber refdes2 pinnumber2)
         pinnumber2)
       )))
