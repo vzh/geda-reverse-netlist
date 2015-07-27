@@ -2,7 +2,7 @@
 
 all: generated.sch
 
-generated.sch: parser.scm define.scm
+generated.sch: parser.scm define.scm netlist assignments
 	gschem -s $<
 
 check: standard.sch generated.sch
