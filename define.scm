@@ -436,5 +436,7 @@
 
 (define (regenerate-nets)
   (begin
+    (remove-nets)
     (netbased-netlist->schematic-nets netbased-netlist)
+    (gschem-msg "Completed!")
     ))
