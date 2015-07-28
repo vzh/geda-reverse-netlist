@@ -22,7 +22,7 @@
     (page-contents (active-page))))
 
 ; filter objects by given pinnumber
-(define (get-objects-with-refdes-by-pinnumber refdes pinnumber)
+(define (get-refdes-pins-by-pinnumber refdes pinnumber)
   (let* ((objects (get-objects-by-refdes refdes))
          (found (filter
                   (lambda (object)
@@ -31,7 +31,7 @@
     (if (or
           (> (length found) 1)
           (null? found))
-      (output-error 'pin-number-error "get-objects-with-refdes-by-pinnumber"
+      (output-error 'pin-number-error "get-refdes-pins-by-pinnumber"
                     (format #f "Too many or too few objects with given \"pinnumber\": ~A" found) found)
       (car found))))
 
@@ -88,11 +88,11 @@
     (make-net
       (get-object-pin-coord
         refdes1
-        (get-objects-with-refdes-by-pinnumber refdes1 pinnumber1)
+        (get-refdes-pins-by-pinnumber refdes1 pinnumber1)
         pinnumber1)
       (get-object-pin-coord
         refdes2
-        (get-objects-with-refdes-by-pinnumber refdes2 pinnumber2)
+        (get-refdes-pins-by-pinnumber refdes2 pinnumber2)
         pinnumber2)
       )))
 
