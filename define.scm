@@ -24,7 +24,7 @@
 ; filter objects by given pinnumber
 (define (get-refdes-pins-by-pinnumber refdes pinnumber)
   (let* ((objects (get-objects-by-refdes refdes))
-         (found (filter
+         (found (filter-map
                   (lambda (object)
                     (get-pin-with-number refdes (component-pin-list object) pinnumber))
                   objects)))
@@ -71,30 +71,19 @@
                   (format #f "Object ~A is not component" object) object)
     ))
 
-; get pin coord for pinnumber
-(define (get-object-pin-coord refdes object pinnumber)
-  ;line-start is the connectible point
-  (line-start (get-pin-with-number
-                refdes
-                (component-pin-list object)
-                pinnumber)))
-
 ; make net between two fignations: (refdes1 . pinnumber1) and (refdes2 . pinnumber2)
 (define (make-net-between-refdes-pinnumber-pairs pair1 pair2)
   (let ((refdes1 (car pair1))
         (pinnumber1 (cdr pair1))
         (refdes2 (car pair2))
         (pinnumber2 (cdr pair2)))
-    (make-net
-      (get-object-pin-coord
-        refdes1
-        (get-refdes-pins-by-pinnumber refdes1 pinnumber1)
-        pinnumber1)
-      (get-object-pin-coord
-        refdes2
-        (get-refdes-pins-by-pinnumber refdes2 pinnumber2)
-        pinnumber2)
-      )))
+    (let ((pin1 (get-refdes-pins-by-pinnumber refdes1 pinnumber1))
+          (pin2 (get-refdes-pins-by-pinnumber refdes2 pinnumber2)))
+      (make-net
+        ;line-start is the connectible point
+        (line-start pin1)
+        (line-start pin2)
+        ))))
 
 (define (append-component-with-attribs symbol-name coords refdes)
   (let ((C (make-component/library symbol-name coords 0 #f #f))
