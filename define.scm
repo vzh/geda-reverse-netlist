@@ -71,19 +71,50 @@
                   (format #f "Object ~A is not component" object) object)
     ))
 
+; Returns the tree of the connected objects
+(define (get-all-connections object check-ls)
+  ; walk recursively through the list of objects
+  ; appending them to the new list
+  (if (null? object)
+    check-ls
+    ; else
+    ; check if the object is already in the list
+    (if (member object check-ls)
+      check-ls
+      ; else
+      ; get all connections for each object in the object connections list
+      (get-all-list-connections (object-connections object) (cons object check-ls))
+      )))
+
+(define (get-all-list-connections objects check-ls)
+  (if (null? objects)
+    check-ls
+    ; else
+    (let ((new-ls (get-all-connections (car objects) check-ls)))
+      (get-all-list-connections (cdr objects) new-ls)
+      )))
+
+
+(define (connected? pin1 pin2)
+  (member pin2 (get-all-connections pin1 '())))
+
 ; make net between two fignations: (refdes1 . pinnumber1) and (refdes2 . pinnumber2)
-(define (make-net-between-refdes-pinnumber-pairs pair1 pair2)
+(define (append-net pair1 pair2)
   (let ((refdes1 (car pair1))
         (pinnumber1 (cdr pair1))
         (refdes2 (car pair2))
         (pinnumber2 (cdr pair2)))
     (let ((pin1 (get-refdes-pins-by-pinnumber refdes1 pinnumber1))
           (pin2 (get-refdes-pins-by-pinnumber refdes2 pinnumber2)))
-      (make-net
-        ;line-start is the connectible point
-        (line-start pin1)
-        (line-start pin2)
-        ))))
+
+      (if (not (connected? pin1 pin2))
+        (begin (page-append!
+          (active-page)
+          (make-net
+            ;line-start is the connectible point
+            (line-start pin1)
+            (line-start pin2)))
+          )))))
 
 (define (append-component-with-attribs symbol-name coords refdes)
   (let ((C (make-component/library symbol-name coords 0 #f #f))
@@ -94,11 +125,6 @@
       (output-error 'misc-error "append-component-with-attribs"
                     (format #f "Component ~A not found" symbol-name) symbol-name)
       )))
-
-(define (append-net pair1 pair2)
-  (page-append!
-    (active-page)
-    (make-net-between-refdes-pinnumber-pairs pair1 pair2)))
 
 (define (get-assignments-list inputf)
   (let* ((port (make-line-buffering-input-port (open-file inputf "r"))))
@@ -425,7 +451,6 @@
 
 (define (regenerate-nets)
   (begin
-    (remove-nets)
     (netbased-netlist->schematic-nets netbased-netlist)
     (gschem-msg "Completed!")
     ))
