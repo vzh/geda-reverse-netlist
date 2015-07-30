@@ -433,18 +433,17 @@
 (define netbased-netlist
   (join-by-first (apap (flatten-one instancebased-netlist))))
 
-(define (net->string ls)
+(define (add-net ls)
   (if (not (null? (cdr ls)))
     (begin
       ; (append-net pair1 pair2)
       (append-net (cons (caar ls) (cadar ls)) (cons (caadr ls) (cadadr ls)))
-      (net->string (cdr ls))
+      (add-net (cdr ls))
       )
     ))
 
 (define (netbased-netlist->schematic-nets ls)
-  (for-each (lambda (net) (net->string (cdr net))) ls)
-)
+  (for-each (lambda (net) (add-net (cdr net))) ls))
 
 (define (generate-nets)
   (netlist->schematic instancebased-netlist))
