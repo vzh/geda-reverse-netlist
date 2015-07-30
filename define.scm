@@ -448,8 +448,35 @@
 (define (generate-nets)
   (netlist->schematic instancebased-netlist))
 
+(define (contains-coord? object coord) 
+  (if (pin? object)
+    (equal? (line-start object) coord)
+    ; else we have net
+    (or
+      (equal? (line-start object) coord)
+      (equal? (line-end object) coord)
+      )))
+
+(define (connections-dont-contain-coord ls coord)
+  (null? (filter (lambda (object) (contains-coord? object coord)) ls)))
+
+(define (is-dangling-net? net)
+  (and (net? net)
+       (or (connections-dont-contain-coord (object-connections net) (line-start net))
+           (connections-dont-contain-coord (object-connections net) (line-end net)))
+       ))
+
+(define (page-dangling-nets page)
+  (filter is-dangling-net? (page-contents page)))
+
+(define (remove-dangling-nets! page)
+  (let ((nets (page-dangling-nets page)))
+    (or (null? nets)
+        (apply page-remove! page nets))))
+
 (define (regenerate-nets)
   (begin
+    (remove-dangling-nets! (active-page))
     (netbased-netlist->schematic-nets netbased-netlist)
     (gschem-msg "Completed!")
     ))
